@@ -1,4 +1,4 @@
-= Artifact `enclave:examples-go`
+# Artifact `enclave:examples-go`
 
 This is an example artifact containing the package `enclave:examples-go`
 
