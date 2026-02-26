@@ -1,0 +1,16 @@
+package enclave:examples-go;
+
+world examples-go {
+    include wasi:cli/imports@0.2.6;
+    include wasi:http/proxy@0.2.0;
+
+    export hello-world;
+}
+
+interface hello-world {
+    hello: func() -> tuple<string, string>;
+    google: func() -> tuple<string, string>;
+    greet: func(name: string) -> tuple<string, string>;
+    print-env: func() -> tuple<string, string>;
+    print-args: func() -> tuple<string, string>;
+}
