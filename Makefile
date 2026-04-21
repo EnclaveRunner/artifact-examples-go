@@ -4,7 +4,7 @@ package:
 	wkg wit build
 
 generate:
-	go tool wit-bindgen-go generate --world examples --out internal ./enclave:examples-go.wasm
+	go tool wit-bindgen-go generate --world examples --out internal ./enclave:benchmark.wasm
 
 compile:
-	tinygo build -target=wasip2 -o examples-go.wasm --wit-package enclave:examples-go.wasm --wit-world examples-go main.go 2>&1
+	tinygo build -target=wasip2 -o benchmark.wasm --wit-package enclave:benchmark.wasm --wit-world benchmark main.go 2>&1
